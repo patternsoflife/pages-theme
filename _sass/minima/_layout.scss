@@ -150,9 +150,23 @@
 }
 
 .footer-col-wrapper,
+.partner-links,
 .social-links {
   @include relative-font-size(0.9375);
   color: $brand-color;
+}
+
+.partner-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+
+  img {
+    width: 100px;
+    height: auto;
+    margin: 25px;
+  }
 }
 
 .footer-col {

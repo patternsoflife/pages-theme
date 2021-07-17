@@ -3,33 +3,12 @@
 
   <div class="wrapper">
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ 'feed.xml' | relative_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
-    </div>
+    <div class="partner-links">
+      <a href="https://www.redesigningpsychiatry.org/"><img src="{{ '/assets/rp-logo.svg' | relative_url }}" alt="Redesigning Psychiatry"></a>
+      <a href="https://www.parnassiagroep.nl/"><img src="{{ '/assets/pg-logo.png' | relative_url }}" alt="Parnassia Groep"></a>
+      <a href="https://vu.nl/en/"><img src="{{ '/assets/vu-logo.svg' | relative_url }}" alt="Vrije Universiteit Amsterdam"></a>
+      <a href="https://www.labela.nl/"><img src="{{ '/assets/labela-logo.svg' | relative_url }}" alt="Label A"></a>
 
-    <div class="social-links">
-      {%- include social.html -%}
     </div>
 
   </div>
