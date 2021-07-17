@@ -9,6 +9,8 @@ layout: default
 
   {{ content }}
 
+  <p>{{ site.description | escape }} <a href="{% link about.md %}">Read more…</a></p>
+
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
