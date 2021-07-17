@@ -382,7 +382,7 @@
   background-color: #62a59f;
 
   h1 {
-    @include relative-font-size(2.375);
+    @include relative-font-size(2);
     line-height: 1.1;
     margin-top: 10px;
   }
@@ -393,5 +393,13 @@
 
   video {
     margin: auto;
+  }
+}
+
+@media screen and (min-width: $on-large) {
+  .banner {
+    h1 {
+      @include relative-font-size(2.375);
+    }
   }
 }
