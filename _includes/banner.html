@@ -6,7 +6,13 @@
         <p>{{ page.banner.blurb }}</p>
       </div>
       <div class="banner-col">
-        <p><em>(image goes here)</em></p>
+
+        {%- if page.banner.video -%}
+          <video width="300" height="200" autoplay muted>
+            <source src="{{ '/assets/' | relative_url }}{{ page.banner.video }}.mp4" type="video/mp4">
+          </video>
+        {%- endif -%}
+
       </div>
     </div>
   </div>
