@@ -197,11 +197,13 @@
 }
 
 @media screen and (min-width: $on-medium) {
-  .footer-col-wrapper {
+  .footer-col-wrapper,
+  .banner-col-wrapper {
     display: flex
   }
 
-  .footer-col {
+  .footer-col,
+  .banner-col {
     width: calc(100% - (#{$spacing-unit} / 2));
     padding: 0 ($spacing-unit / 2);
 
@@ -360,5 +362,20 @@
 @media screen and (min-width: $on-large) {
   .one-half {
     width: calc(50% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+/**
+ * Banner
+ */
+.banner {
+  color: #FFFFFF;
+  background-color: #5F9EA2;
+
+  h1 {
+    @include relative-font-size(2.375);
+    line-height: 1.1;
+    margin-top: 10px;
   }
 }

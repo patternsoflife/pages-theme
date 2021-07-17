@@ -6,4 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: home
+banner:
+  title: "The new paradigm<br> in mental health is focused on patterns."
+  blurb: "Blablabla myes."
 ---

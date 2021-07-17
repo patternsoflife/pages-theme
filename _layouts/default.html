@@ -7,7 +7,12 @@
 
     {%- include header.html -%}
 
+    {%- if page.banner -%}
+      {%- include banner.html -%}
+    {%- endif -%}
+
     <main class="page-content" aria-label="Content">
+
       <div class="wrapper">
         {{ content }}
       </div>
