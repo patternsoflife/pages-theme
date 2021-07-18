@@ -239,10 +239,12 @@
 
 .page-heading {
   @include relative-font-size(2);
+  color: $heading-color;
 }
 
 .post-list-heading {
   @include relative-font-size(1.75);
+  color: $heading-color;
 }
 
 .post-list {
@@ -278,6 +280,7 @@
   @include relative-font-size(2);
   letter-spacing: -1px;
   line-height: 1.15;
+  color: $heading-color;
 
   @media screen and (min-width: $on-large) {
     @include relative-font-size(2);
@@ -286,6 +289,10 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+
+  h1, h2 {
+    color: $heading-color;
+  }
 
   h1, h2, h3 { margin-top: $spacing-unit * 2 }
   h4, h5, h6 { margin-top: $spacing-unit }
@@ -379,7 +386,7 @@
  */
 .banner {
   color: #FFFFFF;
-  background-color: #62a59f;
+  background-color: $banner-color;
 
   h1 {
     @include relative-font-size(2);
