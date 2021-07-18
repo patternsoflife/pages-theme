@@ -7,10 +7,6 @@ layout: default
     <h2 class="post-list-heading">{{ page.title }}</h2>
   {%- endif -%}
 
-  {%- if site.description -%}
-    <p>{{ site.description | escape }} <a href="{% link about.md %}">Read more…</a></p>
-  {%- endif -%}
-
 
   {{ content }}
 
