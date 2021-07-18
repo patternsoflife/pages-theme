@@ -9,4 +9,5 @@ layout: home
 banner:
   title: "The new paradigm<br> in mental health is focused on patterns."
   blurb: "Blablabla myes."
+  video: simplified3
 ---
