@@ -92,6 +92,12 @@
       margin-right: 0;
     }
     margin-left: 20px;
+
+  }
+
+  .flag-link {
+    height: $base-line-height;
+    width: auto;
   }
 
   @media screen and (min-width: $on-medium) {

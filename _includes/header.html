@@ -26,9 +26,9 @@
           {%- endfor -%}
           {%- if page.translate -%}
             {%- if page.translate.en -%}
-              <a class="page-link" href="https://www.patternsoflife.nl/en{{ page.translate.en }}">EN</a>
+              <a class="page-link" href="https://www.patternsoflife.nl/en{{ page.translate.en }}"><img class="flag-link" src="{{ 'assets/en-flag.svg' | relative_url }}"> EN</a>
             {%- elsif page.translate.nl -%}
-              <a class="page-link" href="https://www.patternsoflife.nl{{ page.translate.nl }}">NL</a>
+              <a class="page-link" href="https://www.patternsoflife.nl{{ page.translate.nl }}"><img class="flag-link" src="{{ 'assets/nl-flag.svg' | relative_url }}"> NL</a>
             {%- endif -%}
           {%- else -%}
             {%- if site.lang == "nl" -%}
