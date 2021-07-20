@@ -4,6 +4,6 @@ layout: page
 
 <ul>
 {% for person in site.team %}
-  <li>{{ person.name }} - {{ person.role }}</li>
+  <li><a href="{{ person.url }}">{{ person.name }}</a> - {{ person.role }}</li>
 {% endfor %}
 </ul>
