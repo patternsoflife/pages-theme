@@ -1,8 +1,15 @@
 ---
-layout: page
+layout: default
 ---
+<article class="post">
 
-<h2>{{ page.name }}</h2>
-<h3>{{ page.role }}</h3>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.name | escape }}</h1>
+    <h3>{{ page.role | escape }}</h3>
+  </header>
 
-{{ content }}
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
