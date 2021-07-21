@@ -333,30 +333,25 @@
   .team-list {
     display: flex;
     list-style: none;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     margin-left: 0;
 
     li {
-      margin-top: 10px;
 
+      /* Margin */
+      margin-top: 10px;
       &:first-child {
         margin-top: 0;
       }
 
+      /* Width */
+      width: 100%;
+      @media screen and (min-width: $on-medium) {
+        width: 50%;
+      }
+
+      /* Content */
       a {
-        &, &:visited {
-          p {
-            color: $text-color;
-          }
-        }
-
-        &:hover {
-          text-decoration: none;
-          h3 {
-            text-decoration: underline;
-          }
-        }
-
         .team-list-member {
           display: flex;
           flex-flow: row nowrap;
@@ -370,22 +365,35 @@
           }
 
           .member-details {
-            h3 {
+            margin-left: 10px;
+
+            h3, p {
               margin: 0;
-              padding: 0;
-              @include relative-font-size(1.125);
+              line-height: 1;
             }
-            p {
-              margin: 0;
-              padding: 0;
+
+            h3 {
+              @include relative-font-size(1.125);
             }
           }
         }
 
-      } /* a */
-    } /* li */
-  } /* .team-list */
+        &, &:visited {
+          p {
+            color: $text-color;
+          }
+        }
 
+        &:hover {
+          text-decoration: none;
+          h3 {
+            text-decoration: underline;
+          }
+        }
+      }
+
+    }
+  }
 
 }
 
