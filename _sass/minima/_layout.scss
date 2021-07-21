@@ -242,7 +242,8 @@
   flex: 1 0 auto;
 }
 
-.page-content > .wrapper {
+.page-content > .wrapper > .home,
+.page-content > .wrapper > .post {
   padding-top: $spacing-unit;
   padding-bottom: $spacing-unit;
 }
