@@ -502,6 +502,12 @@
 }
 
 @media screen and (min-width: $on-large) {
+  .team-member-pic-wrapper {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: $on-large) {
   .banner {
     h1 {
       @include relative-font-size(2.375);
