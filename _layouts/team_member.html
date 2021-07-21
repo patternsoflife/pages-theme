@@ -4,16 +4,20 @@ layout: default
 
 <div class="team-banner">
   <div class="wrapper">
-    <div class="banner-col-wrapper">
-      <div class="banner-col">
+    <div class="team-banner-grid">
+
+      <div class="team-banner-heading">
         <h1>{{ page.full_name | escape }}</h1>
+      </div>
+
+      <div class="team-banner-details">
         <p>{{ page.role | escape }}</p>
       </div>
-      <div class="banner-col">
-        <div class="team-member-pic-wrapper">
-          <img class="team-member-pic" src="/assets{{ page.url }}.jpg" width="100px" height="150px">
-        </div>
+
+      <div class="team-banner-picture">
+        <img src="/assets{{ page.url }}.jpg" width="100px" height="150px">
       </div>
+
     </div>
   </div>
 </div>

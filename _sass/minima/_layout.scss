@@ -458,24 +458,22 @@
 
 
 /**
- * Banners
+ * Homepage banner
  */
-.banner, .team-banner {
+.banner {
   padding-top: 10px;
+  color: #FFFFFF;
+  background-color: $banner-color;
 
   h1 {
     @include relative-font-size(2);
     line-height: 1.1;
     margin-top: 0;
-  }
-}
-
-.banner {
-  color: #FFFFFF;
-  background-color: $banner-color;
-
-  h1 {
     color: #FFFFFF;
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(2.375);
+    }
   }
 
   .banner-vid-wrapper {
@@ -487,31 +485,59 @@
   }
 }
 
+
+
+/**
+ * Team member page banner
+ */
 .team-banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: $team-color;
   background-color: $team-bg-color;
 
   h1 {
+    @include relative-font-size(2);
+    line-height: 1.1;
+    margin-top: 0;
     color: $team-color;
   }
 }
 
+.team-banner-grid {
+  display: grid;
+  grid-template-columns: auto 100px;
+  grid-template-rows: min-content auto;
+}
+
+.team-banner-heading {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.team-banner-details {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.team-banner-picture {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
 @media screen and (min-width: $on-medium) {
-  .team-member-pic-wrapper {
-    text-align: right;
+  .team-banner-heading {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
-}
 
-@media screen and (min-width: $on-large) {
-  .team-member-pic-wrapper {
-    text-align: right;
+  .team-banner-details {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
-}
 
-@media screen and (min-width: $on-large) {
-  .banner {
-    h1 {
-      @include relative-font-size(2.375);
-    }
+  .team-banner-picture {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
   }
 }
