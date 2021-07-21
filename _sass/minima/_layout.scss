@@ -334,46 +334,59 @@
     display: flex;
     list-style: none;
     flex-flow: column nowrap;
+    margin-left: 0;
 
-    a {
-      &, &:visited {
-        p {
-          color: $text-color;
-        }
+    li {
+      margin-top: 10px;
+
+      &:first-child {
+        margin-top: 0;
       }
 
-      &:hover {
-        p {
+      a {
+        &, &:visited {
+          p {
+            color: $text-color;
+          }
+        }
+
+        &:hover {
           text-decoration: none;
+          h3 {
+            text-decoration: underline;
+          }
         }
-      }
-    }
 
-    .team-list-member {
-      display: flex;
-      flex-flow: row nowrap;
+        .team-list-member {
+          display: flex;
+          flex-flow: row nowrap;
 
-      .picture-wrapper {
-        img {
-          width: 30px;
-          height: 45px;
-          margin: 0;
-        }
-      }
+          .picture-wrapper {
+            img {
+              width: 30px;
+              height: 45px;
+              margin: 0;
+            }
+          }
 
-      .member-details {
-        h3 {
-          margin: 0;
-          padding: 0;
-          @include relative-font-size(1);
+          .member-details {
+            h3 {
+              margin: 0;
+              padding: 0;
+              @include relative-font-size(1.125);
+            }
+            p {
+              margin: 0;
+              padding: 0;
+            }
+          }
         }
-        p {
-          margin: 0;
-          padding: 0;
-        }
-      }
-    }
-  }
+
+      } /* a */
+    } /* li */
+  } /* .team-list */
+
+
 }
 
 
