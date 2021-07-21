@@ -493,16 +493,13 @@
   h1 {
     color: $team-color;
   }
-
-  @media screen and (min-width: $on-medium) {
-    .team-member-pic-wrapper {
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
 }
 
-
+@media screen and (min-width: $on-medium) {
+  .team-member-pic-wrapper {
+    text-align: right;
+  }
+}
 
 @media screen and (min-width: $on-large) {
   .banner {
