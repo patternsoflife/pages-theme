@@ -387,6 +387,7 @@
 }
 
 
+
 /**
  * Banner
  */
@@ -414,6 +415,37 @@
   .banner {
     h1 {
       @include relative-font-size(2.375);
+    }
+  }
+}
+
+
+
+/**
+ * Team
+ */
+.team-list {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.team-list-member {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .picture-wrapper {
+    img {
+      width: 16px;
+      height: 24px;
+    }
+  }
+
+  .member-details {
+    h3 {
+      @include relative-font-size(1);
+    }
+    p {
+      margin: 0;
     }
   }
 }

@@ -2,8 +2,20 @@
 layout: page
 ---
 
-<ul>
+<ul class="team-list">
 {% for person in site.team %}
-  <li><a href="{{ person.url | relative_url }}">{{ person.name }}</a> - {{ person.role }}</li>
+  <li>
+    <a href="{{ person.url | relative_url }}">
+      <div class="team-list-member">
+        <div class="picture-wrapper">
+          <img src="/assets{{ person.url }}.jpg" width="16px" height="24px">
+        </div>
+        <div class="member-details">
+          <h3>{{ person.name }}</h3>
+          <p>{{ person.role }}</p>
+        </div>
+      </div>
+    </a>
+  </li>
 {% endfor %}
 </ul>
