@@ -12,6 +12,10 @@ layout: default
 
       <div class="team-banner-details">
         <p>{{ page.role | escape }}</p>
+
+        {%- if page.social_links -%}
+          {%- include social.html -%}
+        {%- endif -%}
       </div>
 
       <div class="team-banner-picture">
