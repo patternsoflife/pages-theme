@@ -426,7 +426,21 @@
  */
 .team-list {
   display: flex;
+  list-style: none;
   flex-flow: column nowrap;
+
+  a {
+    &, &:visited {
+      p {
+        color: $text-color;
+      }
+    }
+
+    &:hover {
+      p {
+        text-decoration: none;
+      }
+    }
 }
 
 .team-list-member {
