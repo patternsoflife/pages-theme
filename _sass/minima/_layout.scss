@@ -403,7 +403,7 @@
 
 .social-media-list {
   display: table;
-  margin: 0 auto;
+  margin: 0;
   li {
     float: left;
     margin: 5px 10px 5px 0;
@@ -411,8 +411,6 @@
     a {
       display: block;
       padding: $spacing-unit / 4;
-      border: 1px solid $border-color-01;
-      &:hover { border-color: $border-color-02 }
     }
   }
 }
