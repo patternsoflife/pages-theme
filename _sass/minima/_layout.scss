@@ -459,27 +459,50 @@
 
 
 /**
- * Banner
+ * Banners
  */
+.banner, .team-banner {
+  h1 {
+    @include relative-font-size(2);
+    line-height: 1.1;
+    margin-top: 10px;
+  }
+}
+
 .banner {
   color: #FFFFFF;
   background-color: $banner-color;
 
   h1 {
-    @include relative-font-size(2);
-    line-height: 1.1;
-    margin-top: 10px;
     color: #FFFFFF;
   }
-}
 
-.banner-vid-wrapper {
-  margin: auto;
-
-  video {
+  .banner-vid-wrapper {
     margin: auto;
+
+    video {
+      margin: auto;
+    }
   }
 }
+
+.team-banner {
+  color: $team-color;
+  background-color: $team-bg-color;
+
+  h1 {
+    color: $team-color;
+  }
+
+  @media screen and (min-width: $on-medium) {
+    .team-member-pic {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}
+
+
 
 @media screen and (min-width: $on-large) {
   .banner {

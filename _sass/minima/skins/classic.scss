@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+// Colors from the Patterns of Life logo
+$pol-color-saffron:     #F8BE66;
+$pol-color-cadet:       #5F9EA2;
+$pol-color-cadet-adj:   #62A59F; // Adjusted to match video color space
+$pol-color-baltic:      #2A2D34;
+
+// Color variables from Minima
 $brand-color:           #828282 !default;
 $brand-color-light:     lighten($brand-color, 40%) !default;
 $brand-color-dark:      darken($brand-color, 25%) !default;
@@ -24,8 +31,11 @@ $table-header-bg-color: lighten($brand-color, 43%) !default;
 $table-header-border:   lighten($brand-color, 37%) !default;
 $table-border-color:    $border-color-01 !default;
 
-$banner-color:          #62a59f !default;
-$heading-color:         darken($banner-color, 15%) !default;
+// Additional color variables for PoL website theme
+$banner-color:          $pol-color-cadet-adj !default;
+$heading-color:         darken($pol-color-cadet-adj, 15%) !default;
+$team-color:            $pol-color-baltic !default;
+$team-bg-color:         $pol-color-saffron !default;
 
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"

@@ -1,15 +1,27 @@
 ---
-layout: no_banner
+layout: default
 ---
-<article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.name | escape }}</h1>
-    <h3>{{ page.role | escape }}</h3>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
+<div class="team-banner">
+  <div class="wrapper">
+    <div class="banner-col-wrapper">
+      <div class="banner-col">
+        <h1>{{ page.name | escape }}</h1>
+      </div>
+      <div class="banner-col">
+        <img class="team-member-pic" src="/assets{{ person.url }}.jpg" width="200px" height="300px">
+      </div>
+    </div>
+    <p>{{ page.role | escape }}</p>
   </div>
+</div>
 
-</article>
+<div class="wrapper">
+  <article class="post">
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+  </article>
+</div>
