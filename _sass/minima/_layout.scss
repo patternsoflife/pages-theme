@@ -452,15 +452,19 @@
     img {
       width: 16px;
       height: 24px;
+      margin: 0;
     }
   }
 
   .member-details {
     h3 {
+      margin: 0;
+      padding: 0;
       @include relative-font-size(1);
     }
     p {
       margin: 0;
+      padding: 0;
     }
   }
 }
