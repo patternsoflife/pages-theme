@@ -462,10 +462,12 @@
  * Banners
  */
 .banner, .team-banner {
+  padding-top: 10px;
+
   h1 {
     @include relative-font-size(2);
     line-height: 1.1;
-    margin-top: 10px;
+    margin-top: 0;
   }
 }
 
