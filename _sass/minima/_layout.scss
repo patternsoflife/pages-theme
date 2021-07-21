@@ -239,8 +239,12 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
   flex: 1 0 auto;
+}
+
+.page-content > .wrapper {
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
 }
 
 .page-heading {
