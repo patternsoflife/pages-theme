@@ -237,9 +237,13 @@ pre {
   color: #828282;
 }
 
+.social-link-color {
+  color: $team-color;
+}
+
 .svg-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   display: inline-block;
   fill: currentColor;
   padding: 5px 3px 2px 5px;
