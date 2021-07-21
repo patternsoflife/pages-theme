@@ -329,6 +329,51 @@
   h6 {
     @include relative-font-size(1.0625);
   }
+
+  .team-list {
+    display: flex;
+    list-style: none;
+    flex-flow: column nowrap;
+
+    a {
+      &, &:visited {
+        p {
+          color: $text-color;
+        }
+      }
+
+      &:hover {
+        p {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .team-list-member {
+      display: flex;
+      flex-flow: row nowrap;
+
+      .picture-wrapper {
+        img {
+          width: 16px;
+          height: 24px;
+          margin: 0;
+        }
+      }
+
+      .member-details {
+        h3 {
+          margin: 0;
+          padding: 0;
+          @include relative-font-size(1);
+        }
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
 }
 
 
@@ -415,56 +460,6 @@
   .banner {
     h1 {
       @include relative-font-size(2.375);
-    }
-  }
-}
-
-
-
-/**
- * Team
- */
-.team-list {
-  display: flex;
-  list-style: none;
-  flex-flow: column nowrap;
-
-  a {
-    &, &:visited {
-      p {
-        color: $text-color;
-      }
-    }
-
-    &:hover {
-      p {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-.team-list-member {
-  display: flex;
-  flex-flow: row nowrap;
-
-  .picture-wrapper {
-    img {
-      width: 16px;
-      height: 24px;
-      margin: 0;
-    }
-  }
-
-  .member-details {
-    h3 {
-      margin: 0;
-      padding: 0;
-      @include relative-font-size(1);
-    }
-    p {
-      margin: 0;
-      padding: 0;
     }
   }
 }
