@@ -35,7 +35,7 @@ $table-border-color:    $border-color-01 !default;
 $banner-color:          $pol-color-cadet-adj !default;
 $heading-color:         darken($pol-color-cadet-adj, 15%) !default;
 $team-color:            $pol-color-baltic !default;
-$team-bg-color:         $pol-color-saffron !default;
+$team-bg-color:         lighten($pol-color-saffron, 15%) !default;
 
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"
