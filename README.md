@@ -1,4 +1,4 @@
-# English version of the Patterns of Life website
+# Jekyll theme for the Patterns of Life website
 
 This repository contains the theme files for the
 [Patterns of Life](https://www.patternsoflife.nl/en/) website.
