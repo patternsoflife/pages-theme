@@ -1,12 +1,16 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
+  <div class="wrapper">  
 
     <div class="partner-links">
       <a href="https://www.parnassiagroep.nl/"><img src="{{ '/assets/pg-logo.png' | relative_url }}" alt="Parnassia Groep"></a>
       <a href="https://www.redesigningpsychiatry.org/"><img src="{{ '/assets/rp-logo.svg' | relative_url }}" alt="Redesigning Psychiatry"></a>
-      <a href="https://vu.nl/en/"><img src="{{ '/assets/vu-logo.svg' | relative_url }}" alt="Vrije Universiteit Amsterdam"></a>
+      {%- if site.lang == "nl" -%}
+        <a href="https://vu.nl/"><img src="{{ '/assets/vu-logo.svg' | relative_url }}" alt="Vrije Universiteit Amsterdam"></a>
+      {%- else -%}
+        <a href="https://vu.nl/en/"><img src="{{ '/assets/vu-logo.svg' | relative_url }}" alt="Free University Amsterdam"></a>
+      {%- endif -%}
       <a href="https://www.labela.nl/"><img src="{{ '/assets/labela-logo.svg' | relative_url }}" alt="Label A"></a>
 
     </div>

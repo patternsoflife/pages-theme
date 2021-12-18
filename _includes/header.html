@@ -4,6 +4,23 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+    {%- assign translate_target = '/' -%}
+    {%- if site.lang == "nl" -%}
+      {%- assign flag_src = 'assets/en-flag.svg' -%}
+      {%- assign translate_text = 'EN' -%}
+      {%- assign translate_root = 'https://www.patternsoflife.nl/en' -%}
+      {%- if page.translate -%}
+        {%- assign translate_target = page.translate.en -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign flag_src = 'assets/nl-flag.svg' -%}
+      {%- assign translate_text = 'NL' -%}
+      {%- assign translate_root = 'https://www.patternsoflife.nl' -%}
+      {%- if page.translate -%}
+        {%- assign translate_target = page.translate.nl -%}
+      {%- endif -%}
+    {%- endif -%}
+
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><img id="logo" src="{{ 'assets/pol-logo.svg' | relative_url }}"></a>
 
     {%- if titles_size > 0 -%}
@@ -24,19 +41,9 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          {%- if page.translate -%}
-            {%- if page.translate.en -%}
-              <a class="page-link" href="https://www.patternsoflife.nl/en{{ page.translate.en }}"><img class="flag-link" height="16px" width="24px" src="{{ 'assets/en-flag.svg' | relative_url }}"> EN</a>
-            {%- elsif page.translate.nl -%}
-              <a class="page-link" href="https://www.patternsoflife.nl{{ page.translate.nl }}"><img class="flag-link" height="16px" width="24px" src="{{ 'assets/nl-flag.svg' | relative_url }}"> NL</a>
-            {%- endif -%}
-          {%- else -%}
-            {%- if site.lang == "nl" -%}
-              <a class="page-link" href="https://www.patternsoflife.nl/en/">EN</a>
-            {%- else -%}
-              <a class="page-link" href="https://www.patternsoflife.nl/">NL</a>
-            {%- endif -%}
-          {%- endif -%}
+          <a class="page-link" href="{{ translate_root }}{{ translate_target }}"
+            ><img class="flag-link" height="16px" width="24px" src="{{ flag_src | relative_url }}"
+            > {{ translate_text }}</a>
 
         </div>
       </nav>
